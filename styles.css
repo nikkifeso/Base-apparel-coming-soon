@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 36%, 70%);
+    margin: 0;
+    background-image: linear-gradient(hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+
+}
+    
+.container{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: none;
+    min-height: 100vh;    
+}
+.leftside{
+    width: 830px;
+    /* padding: 0px 110px 160px 160px; */
+    background-image: url("images/bg-pattern-desktop.svg");  
+    background-size: cover;
+    background-position: center center;
+   
+}
+
+.rightside{
+    width: 608px;    
+}
+
+.right-img{
+    background-image: url("images/hero-desktop.jpg"); 
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo{
+    width: 160px;
+    margin: 60px 0;   
+}
+
+.bg-mobile{
+    display: none;
+}
+
+.text{
+    display: block;
+    width: 450px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+h1{
+   font-size: 65px;
+   font-weight: 200;
+   letter-spacing: 20px;
+   animation: texty 0.7s linear forwards;
+   transform: translateX(-100%);
+}
+
+ h1 span{
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+ }
+
+ .text p{
+     font-size: 16px;
+     font-weight: 400;
+     word-spacing: 1px;
+     line-height: 25px;
+     padding-bottom: 30px; 
+ }
+
+form{
+    position: relative;
+}
+
+
+ input{
+     width: 100%;
+     height: 55px;
+     border: 0.6px solid hsl(0, 36%, 70%);
+     border-radius: 50px;
+     padding: 25px 30px;
+     background-color: transparent;
+ }
+ input:focus{
+     box-shadow: 1px 5px 10px hsl(0, 36%, 70%, 0.5);
+     outline: none;
+ }
+
+ input::placeholder{
+     font-family: 'Josefin Sans', sans-serif;
+     font-size: 16px;
+     color:  hsl(0, 36%, 70%);;
+ }
+
+ form.error input{
+     border: 2px solid  hsl(0, 93%, 68%);
+ }
+ 
+ button{
+     /* float: right; */
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 1px 5px 10px hsl(0, 36%, 70%, 0.5);
+     height: 55px;
+     width: 100px;
+     border: none;
+     border-radius: 50px;
+     padding: 15px;
+     position: absolute;
+     top: 0;
+     right: 0;
+     cursor: pointer;
+     transition: opacity 0.3s ease-out;
+ }
+
+ button:hover{
+    opacity: 0.5;
+ }
+
+ .error-icon{
+     display: none;
+     position: absolute;
+     top: 16px ;
+     right: 120px;
+ }
+
+ form.error .error-icon{
+     display: block;
+
+}
+
+small{
+    display: none;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: hsl(0, 93%, 68%);
+}
+
+form.error small{
+    display: block;
+} 
+/* Animation*/
+
+@keyframes texty{
+    to{
+        transform: translateX(0)
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .logo{
+        margin: 30px 0;   
+        width: 100px;
+    }
+    .bg-mobile{
+        display: block;
+        width: calc(100% + 80px);
+        margin-left: -40px;
+        margin-right: -40px;
+        
+    }
+
+    .leftside{
+        width: 100%;
+        padding: 30px 30px 70px 30px 
+    }
+
+    .rightside{
+        display: none;
+    }
+
+    .text{
+        width: 100%;
+        padding-top: 10px;
+        
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center; 
+        letter-spacing: 15px;
+    }
+
+    .text p{
+        text-align: center;
+        font-size: 16px;
+     
+    }
+}
